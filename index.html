@@ -12,6 +12,7 @@
             background-color: black;
             color: white;
             display: flex;
+            flex-direction: column;
         }
         header {
             background-color: #333;
@@ -19,15 +20,18 @@
             padding: 10px 20px;
             text-align: center;
             width: 100%;
+            flex: none; /* Non-flexible header */
+        }
+        .heading {
+            margin-bottom: 20px;
         }
         .nav-container {
             width: 150px;
             background-color: #444;
-            position: fixed;
+            position: sticky;
             top: 0;
-            left: 0;
-            height: 100%;
-            overflow-y: auto; /* Enable scrolling for nav bar if needed */
+            height: 100vh; /* Full height of viewport */
+            overflow-y: auto; /* Enable scrolling if needed */
         }
         .nav-container nav {
             display: flex;
@@ -45,11 +49,11 @@
             background-color: #565;
         }
         .content-container {
-            margin-left: 150px; /* Adjust this to match nav-container width */
             flex: 1;
+            padding: 20px;
         }
         .container {
-            padding: 20px;
+            margin-bottom: 20px;
         }
         .profile-pic {
             width: 208.8px;
@@ -91,10 +95,6 @@
                 height: auto;
                 overflow-y: hidden;
             }
-            .content-container {
-                margin-left: 0;
-                padding-top: 60px; /* Adjust padding to avoid overlap with nav */
-            }
             .nav-container nav {
                 flex-direction: row;
                 justify-content: space-around;
@@ -108,11 +108,11 @@
 </head>
 <body>
 
-<div class="nav-container">
-    <header>
-        <h1>NAMASTE</h1>
-    </header>
+<header>
+    <h1 class="heading">NAMASTE</h1>
+</header>
 
+<div class="nav-container">
     <nav>
         <a href="#about">About</a>
         <a href="#education">Education</a>
@@ -124,7 +124,6 @@
 </div>
 
 <div class="content-container">
-
     <div class="container" id="about">
         <div class="about-container">
             <img src="harsha.jpeg" alt="My Photo" class="profile-pic">
