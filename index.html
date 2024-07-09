@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: black;
+            color: white;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            width: 100%;
+        }
+        nav {
+            width: 150px;
+            background-color: #444;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-top: 60px; /* Padding to account for the header */
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #565;
+        }
+        .container {
+            padding: 20px;
+            margin-left: 220px; /* Adjust this to shift content appropriately */
+            flex: 1;
+        }
+        .profile-pic {
+            width: 208.8px;
+            padding-top: 30px;
+            height: 336px;
+            border-radius: 0%;
+            margin-right: 20px;
+        }
+        .about-container {
+            display: flex;
+            align-items: flex-start;
+        }
+        .about-container .about-text {
+            max-width: 800px;
+            height: 400px;
+            
+        }
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+        }
+        .section-title {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#research">Research Interests</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div>
+    <header>
+        <h1>NAMASTE</h1>
+    </header>
+
+    <div class="container" id="about">
+        <div class="about-container">
+            <img src="harsha.jpeg" alt="My Photo" class="profile-pic">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p >Hey! I'm SriHarsha Bodicherla, a tech enthusiast and a Junior at IIIT Kottayam, where I specialize in AI and Data Science. My passion lies in exploring new advancements in technology, particularly in deep learning and machine unlearning, and I'm dedicated to pushing the boundaries of research in these fields.
+                    <br><br>
+                    In addition to my technical pursuits, I bring 11 years of experience in Carnatic classical music, showcasing my versatility and artistic passion. I am also a well-rounded athlete, excelling in swimming, cricket, badminton, table tennis, and football, with numerous gold medals to my name.
+                    <br><br>
+                    My involvement in various clubs has honed my people skills and leadership abilities. I have served as a Technical Lead in Enigma, Sub Lead in an AI club, and an active member of a music club, along with taking on the role of Outreach Officer. These experiences have enriched my collaborative and interpersonal skills, enabling me to work effectively in diverse team environments.
+                    <br><br>
+                    My diverse interests and achievements reflect my commitment to both academic and personal growth. Welcome to my portfolio!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="education">
+        <h2 class="section-title">Education</h2>
+        <p>Indian Institute of Information Technology Kottayam, Kottayam, India</p>
+        <p>Bachelor of Technology in Computer Science with Specialisation in AI and Data Science (Nov 2026 - Present)</p>
+        <p style="font-size:smaller">SGPAs : 9.17, 8.91, 9.50, 8.13 </p>
+        <p style="font-size:smaller">CGPA : 8.93</p>
+    </div>
+    
+    <div class="container" id="research">
+        <h2 class="section-title">Research Interests</h2>
+        <ul>
+            <li>Computer Vision</li>
+            <li>Remote Sensing and Geospatial Data Science</li>
+            <li>Deep Learning</li>
+            <li>Machine Unlearning</li>
+        </ul>
+    </div>
+    
+    <div class="container" id="research">
+        <h2 class="section-title">Research Papers</h2>
+        <ul>
+            <li>
+                <a href="https://www.researchgate.net/publication/378292004_EcoGen_Fusing_Generative_AI_and_Edge_Intelligence_for_Sustainable_Scalability">
+                    <p>EcoGen: Fusing Generative AI and Edge Intelligence for Sustainable Scalability</p>
+                </a>
+                <p>Authors: Sai Harvin Kusumaraju, Arya Suneesh, Aastha Rana, Sriharsha Bodicherla, Bhaumik Tyagi (Feb 2024)</p>
+            </li>
+            <li>
+                <p>Advanced Atmospheric Correction Algorithms Utilizing Transformer Models and Deep Learning Techniques for Enhanced Satellite Imagery Quality in Diverse Environmental Conditions (Ongoing Research)</p>
+                <p>Authors: SriHarsha Bodicherla</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container" id="projects">
+        <h2 class="section-title">Projects</h2>
+        <p>Friends Hangout Planner (In-progress)</p>
+        <ul>
+            <li>Developing an application for selecting a centralized hangout location based on friends’ locations.</li>
+            <li>Implemented an algorithm to compute an optimal meeting point, integrating Geolocation APIs and Google Maps API for location suggestions.</li>
+            <li>Projected to enhance user experience by optimizing travel distances among friends, resulting in a 30% reduction in average travel time to the hangout spot.</li>
+        </ul>
+        <p>Hand Cricket Game using Hand Sign Recognition (In-progress)</p>
+        <ul>
+            <li>Engineering a CNN to recognize hand signs and convert them into numbers for playing hand cricket.</li>
+            <li>Integrated real-time hand sign detection using Python, TensorFlow, Keras, and OpenCV, achieving a 97% accuracy rate.</li>
+            <li>Working to enhance gameplay experience by reducing latency in hand sign recognition to under 0.1 seconds, ensuring seamless interaction with the computer opponent.</li>
+        </ul>
+        <p>Text Summarizer</p>
+        <ul>
+            <li>Created an NLP-based model to summarize lengthy documents, enhancing information retrieval efficiency by 50%.</li>
+            <li>Implemented tokenization and attention mechanisms with NLTK, SpaCy, and TensorFlow.</li>
+            <li>Reduced document processing time by 40% through optimized algorithmic approaches, improving overall summarization speed and accuracy.</li>
+        </ul>
+        <p>Facial Recognition System</p>
+        <ul>
+            <li>Developed a robust facial recognition system using Python, PyTorch, OpenCV, and Dlib.</li>
+            <li>Utilized VGGFace for accurate feature extraction, achieving a 98% recognition accuracy on benchmark datasets.</li>
+            <li>Improved system reliability by implementing error-handling mechanisms, reducing false positive rates by 25% in real-world scenarios.</li>
+        </ul>
+        <p>Weekly Automatic Newsletter Generator</p>
+        <ul>
+            <li>Designed and implemented an automated newsletter program utilizing web scraping to extract relevant data weekly.</li>
+            <li>Integrated a summarization algorithm with NLTK and BERT to generate concise content, distributing newsletters to 500 subscribers in HTML/PDF format.</li>
+            <li>Enhanced newsletter open rates by 15% through personalized content recommendations based on user preferences, improving reader engagement and retention.</li>
+        </ul>
+    </div>
+
+    <div class="container" id="experience">
+        <h2 class="section-title">Experience</h2>
+        <ol>
+            <li>
+                <p>National Remote Sensing Center, ISRO (NRSC), Hyderabad, Telangana, India</p>
+                <p>Deep Learning Intern (Jun 2024 - Present)</p>
+                <ul>
+                    <li>Enhancing UV-NIR approach with non-zero water leaving radiance approximation for atmospheric correction of satellite imagery in inland and coastal zones using Python, TensorFlow, and SNAP.</li>
+                    <li>Contributing to a research paper on advancements in remote sensing techniques.</li>
+                </ul>
+            </li>
+            <li>
+                <p>SCIMERTECH - Empowering Analytical Science, Karlsruhe, Baden-Wurttemberg, Germany</p>
+                <p>Machine Learning Intern (Dec 2023 - Feb 2024)</p>
+                <ul>
+                    <li>Collaborated in a team of four to develop an AI model for chemical compound recognition and structure generation from spectroscopy data.</li>
+                    <li>Utilized Python, PyTorch, and Pandas for data processing and model training.</li>
+                    <li>Incorporated stakeholder feedback to enhance system features and usability, achieving a 20% improvement in model accuracy.</li>
+                </ul>
+            </li>
+            <li>
+                <p>Linumiz, Chennai, India</p>
+                <p>Software Development Intern (Feb 2023 - Present)</p>
+                <ul>
+                    <li>Created an Alexa skill for Voice-To-Text (NLP) JSON file translation.</li>
+                    <li>Integrated Speech-to-Text and Text-to-Speech models with a Nucleo 144 Micro-controller, optimizing user control operations.</li>
+                    <li>Increased user engagement by 30% through enhanced functionality and user-friendly interface design.</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="container" id="contact">
+        <h2 class="section-title">Contact</h2>
+        <p>Phone: +91 9100862186</p>
+        <p>Email: <a href="mailto:sriharsha22bcd2@iiitkottayam.ac.in" style="color: white;">sriharsha22bcd2@iiitkottayam.ac.in</a></p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/sriharsha-bodicherla" target="_blank">LinkedIn</a>
+            <a href="https://scholar.google.com/citations?hl=en&authuser=4&user=yjkJCgYAAAAJ" target="_blank">Google Scholar</a>
+            <!-- Add other social links as needed -->
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 My Portfolio. All rights reserved.
+    </footer>
+</div>
+
+</body>
+</html>
