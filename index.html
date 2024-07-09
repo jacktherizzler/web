@@ -9,9 +9,9 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
             background-color: black;
             color: white;
+            display: flex;
         }
         header {
             background-color: #333;
@@ -20,31 +20,36 @@
             text-align: center;
             width: 100%;
         }
-        nav {
+        .nav-container {
             width: 150px;
             background-color: #444;
-            height: 100%;
             position: fixed;
             top: 0;
             left: 0;
+            height: 100%;
+            overflow-y: auto; /* Enable scrolling for nav bar if needed */
+        }
+        .nav-container nav {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             padding-top: 60px; /* Padding to account for the header */
         }
-        nav a {
+        .nav-container nav a {
             color: white;
             padding: 14px 20px;
             text-decoration: none;
             text-align: center;
         }
-        nav a:hover {
+        .nav-container nav a:hover {
             background-color: #565;
+        }
+        .content-container {
+            margin-left: 150px; /* Adjust this to match nav-container width */
+            flex: 1;
         }
         .container {
             padding: 20px;
-            margin-left: 170px; /* Adjust this to shift content appropriately */
-            flex: 1;
         }
         .profile-pic {
             width: 208.8px;
@@ -77,39 +82,48 @@
             text-align: center;
             padding: 10px 0;
             width: 100%;
+            margin-top: 20px; /* Add some space after content */
         }
         @media (max-width: 768px) {
-            .container {
+            .nav-container {
+                position: relative;
+                width: 100%;
+                height: auto;
+                overflow-y: hidden;
+            }
+            .content-container {
                 margin-left: 0;
                 padding-top: 60px; /* Adjust padding to avoid overlap with nav */
             }
-            .about-container {
-                flex-direction: column;
-                align-items: center;
+            .nav-container nav {
+                flex-direction: row;
+                justify-content: space-around;
+                padding-top: 0;
             }
-            .profile-pic {
-                width: 150px;
-                height: auto;
-                margin-bottom: 20px;
+            .nav-container nav a {
+                padding: 10px; /* Adjust padding for smaller screens */
             }
         }
     </style>
 </head>
 <body>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#research">Research Interests</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<div>
+<div class="nav-container">
     <header>
         <h1>NAMASTE</h1>
     </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#research">Research Interests</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</div>
+
+<div class="content-container">
 
     <div class="container" id="about">
         <div class="about-container">
